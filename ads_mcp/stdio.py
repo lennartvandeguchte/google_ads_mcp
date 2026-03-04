@@ -14,6 +14,8 @@
 
 """The server for the Google Ads API MCP."""
 import asyncio
+import logging
+import sys
 
 from ads_mcp.coordinator import mcp_server
 from ads_mcp.scripts.generate_views import update_views_yaml
@@ -24,6 +26,7 @@ import dotenv
 
 dotenv.load_dotenv()
 
+logging.basicConfig(stream=sys.stderr, level=logging.WARNING)
 
 tools = [api, docs]
 
@@ -32,7 +35,7 @@ def main():
   """Initializes and runs the MCP server."""
   asyncio.run(update_views_yaml())  # Check and update docs resource
   api.get_ads_client()  # Check Google Ads credentials
-  print("mcp server starting...")
+  print("mcp server starting...", file=sys.stderr)
   mcp_server.run(
       transport="stdio",
       show_banner=False,

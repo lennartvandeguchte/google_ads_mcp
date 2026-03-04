@@ -1,0 +1,17 @@
+{
+    "mcpServers": {
+        "GoogleAds": {
+        "command": "uv",
+        "args": [
+            "run",
+            "--directory",
+            "/Users/lennart/Code/google_ads_mcp",
+            "-m",
+            "ads_mcp.stdio"
+        ],
+        "cwd": "/Users/lennart/Code/google_ads_mcp",
+        "timeout": 30000,
+        "trust": false
+        }
+    }
+}

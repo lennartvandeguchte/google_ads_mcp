@@ -1,3 +1,18 @@
+## Extra notes by Lennart:
+
+To run the MCP server with Claude Code, you need to create a .mcp.json file in the root of the project. This file is already created, but you need to update the path to the project and the command to run the server.
+
+Furthermore, you need to add the `google-ads.yaml` file to the project. This file is already created, but you need to update the credentials.
+
+```yaml
+developer_token: DEVELOPER_TOKEN_HERE
+json_key_file_path: PATH_TO_JSON_KEY_FILE_HERE
+impersonated_email: IMPERSONATED_EMAIL_HERE
+```
+
+You also need to add the json key file to the project. This file can be found in the Google Cloud Console.
+--------------------------------
+
 # Google Ads MCP Server
 
 The Google Ads MCP Server is an implementation of the Model Context Protocol (MCP) that enables Large Language Models (LLMs), such as Gemini, to interact directly with the Google Ads API.
